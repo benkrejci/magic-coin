@@ -41,6 +41,8 @@ To test XOR solution, first clone repo and run `npm i` to install dependencies.
 node -e "require('./solution-xor').tryRandomGrid(16)"
 ```
 
+Output:
+
 <img width="449" alt="image" src="https://user-images.githubusercontent.com/6108440/178316458-04624f7f-9f6e-4244-92bf-0387734231a4.png">
 
 
