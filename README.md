@@ -19,7 +19,7 @@ Stipulations:
 
 # XOR Solution
 
-<img width="542" alt="image" src="https://user-images.githubusercontent.com/6108440/178312892-b63212ce-505d-4971-9219-c23f9f15abc3.png">
+## Implementation
 
 See [solution-xor.js](./solution-xor.js) for implementation.
 
@@ -32,7 +32,18 @@ See [solution-xor.js](./solution-xor.js) for implementation.
    1. XOR all heads-up indices.
    1. Result is index of magic coin.
 
-Notes & Limitations:
+## Test
+
+To test this solution for 1 million randomly-generated grids, clone repo and run:
+```sh
+npm i
+node -e "require('./solution-xor').tryRandomGrids(1_000_000, 16)"
+```
+Output:
+
+<img width="542" alt="image" src="https://user-images.githubusercontent.com/6108440/178312892-b63212ce-505d-4971-9219-c23f9f15abc3.png">
+
+## Notes & Limitations:
 
 - This solution only works for grids with power of 2 sizes (2x2, 4x4, 8x8, etc.) as the friend may be called upon to flip a coin which does not exist in a grid of another size.
 - Technically, you do not need to flip any coin if the initial heads-up XOR result is the index of the magic coin, but this flip will always be a no-op since the algorithm will instruct the friend to flip the 0-index coin.
