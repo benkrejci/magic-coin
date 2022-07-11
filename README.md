@@ -12,10 +12,10 @@ The "Magic Coin" problem:
 
 Stipulations:
 
-1. You are not allowed to see the initial state of the coins (you cannot see the coins until after your friend has left the room).
-1. You and your friend may communicate, but only before your friend enters the room. Once your friend has entered the rom, you effectively never communicate with them again.
-1. The only possible action your friend can take is to flip a coin completely (no rotating, moving, marking or the like).
-1. No mechanics exist which are not stated in the problem (e.g. you can't stand a coin up on its edge, yell to your friend through the walls, etc.) 
+- You are not allowed to see the initial state of the coins (you cannot see the coins until after your friend has left the room).
+- You and your friend may communicate, but only before your friend enters the room. Once your friend has entered the rom, you effectively never communicate with them again.
+- The only possible action your friend can take is to flip a coin completely (no rotating, moving, marking or the like).
+- No mechanics exist which are not stated in the problem (e.g. you can't stand a coin up on its edge, yell to your friend through the walls, etc.) 
 
 # XOR Solution
 
@@ -24,9 +24,17 @@ See [solution-xor.js](./solution-xor.js) for implementation.
 1. Assign an integer index to each coin sequentially (0, 1, 2, ...63).
 1. Friend:
    1. Use the bitwise XOR operation with all indices of heads-up coins.
-   1. If result is index of magic coin, friend is done.
    1. XOR result with index of magic coin.
    1. Flip the coin with this index.
 1. You:
    1. XOR all heads-up indices.
    1. Result is index of magic coin.
+
+Notes & Limitations:
+
+- This solution only works for grids with power of 2 sizes (2x2, 4x4, 8x8, etc.) as the friend may be called upon to flip a coin which does not exist in a grid of another size.
+- Technically, you do not need to flip any coin if the initial heads-up XOR result is the index of the magic coin, but this flip will always be a no-op since the algorithm will instruct the friend to flip the 0-index coin.
+
+# Coordinate Transformations Solution
+
+TBD
