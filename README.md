@@ -35,13 +35,15 @@ See [solution-xor.js](./solution-xor.js) for implementation.
 ## Test
 
 To test this solution for 1 million randomly-generated grids, clone repo and run:
+
 ```sh
 npm i
 node -e "require('./solution-xor').tryRandomGrids(1_000_000, 16)"
 ```
+
 Output:
 
-<img width="542" alt="image" src="https://user-images.githubusercontent.com/6108440/178312892-b63212ce-505d-4971-9219-c23f9f15abc3.png">
+<img width="540" alt="image" src="https://user-images.githubusercontent.com/6108440/178313985-647f6c38-2d5a-472f-abbe-f041815a372c.png">
 
 ## Notes & Limitations:
 
