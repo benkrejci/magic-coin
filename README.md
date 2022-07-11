@@ -19,6 +19,9 @@ Stipulations:
 
 # XOR Solution
 
+<img width="476" alt="image" src="https://user-images.githubusercontent.com/6108440/178312268-46493d73-f90d-4029-85cb-ed93c81f8781.png">
+
+
 See [solution-xor.js](./solution-xor.js) for implementation.
 
 1. Assign an integer index to each coin sequentially (0, 1, 2, ...63).
