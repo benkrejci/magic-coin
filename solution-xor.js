@@ -95,6 +95,7 @@ const tryRandomGrid = (gridSize, verbose = true) => {
 
 const tryRandomGrids = (numGrids, gridSize) => {
   console.log(`Trying grids...`)
+  const start = Date.now()
 
   let matches = 0
   _.times(numGrids, () => {
@@ -103,9 +104,11 @@ const tryRandomGrids = (numGrids, gridSize) => {
   })
 
   console.log(
-    `Valid solution found ${
+    `Valid solution found for ${
       (matches / numGrids) * 100
-    }% of ${numGrids.toLocaleString()} ${gridSize}x${gridSize} grids`
+    }% of ${numGrids.toLocaleString()} ${gridSize}x${gridSize} grids (in ${
+      (Date.now() - start) / 1000
+    }s)`
   )
 }
 
