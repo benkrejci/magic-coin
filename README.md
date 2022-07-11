@@ -38,7 +38,7 @@ To test XOR solution, first clone repo and run `npm i` to install dependencies.
 ### Test solution for a randomly generated grid
 
 ```sh
-node -e "require('./solution-xor').tryRandomGrids(1_000_000, 16)"
+node -e "require('./solution-xor').tryRandomGrid(16)"
 ```
 
 <img width="447" alt="image" src="https://user-images.githubusercontent.com/6108440/178315676-467f43a0-f0d0-4462-b280-5472ba1c67db.png">
