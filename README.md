@@ -34,10 +34,16 @@ See [solution-xor.js](./solution-xor.js) for implementation.
 
 ## Test
 
-To test this solution for 1 million randomly-generated grids, clone repo and run:
+To test XOR solution, first clone repo and run `npm i` to install dependencies.
+### Test solution for a randomly generated grid
 
 ```sh
-npm i
+node -e "require('./solution-xor').tryRandomGrids(1_000_000, 16)"
+```
+
+### Test solution for 1 million randomly-generated grids
+
+```sh
 node -e "require('./solution-xor').tryRandomGrids(1_000_000, 16)"
 ```
 

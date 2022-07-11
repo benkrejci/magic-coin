@@ -1,5 +1,6 @@
 const _ = require('lodash')
 
+// Utility functions
 const vals = (a) => a.map((bit, i) => (bit ? i : 0))
 const calc = (a) => vals(a).reduce((prev, curr) => prev ^ curr)
 const gen = (n) => _.range(0, n).map(() => (Math.random() > 0.5 ? 1 : 0))
@@ -30,9 +31,11 @@ const printGrid = (a, magicIndex) => {
   )
 }
 
+/** Try flipping each coin in passed grid and return heads-up XOR value for each */
 const tryEach = (a) =>
   _.range(0, a.length).map((flipIndex) => calc(flip(a, flipIndex)))
 
+/** Generate a random grid of specified size, find solution, and verify */
 const tryRandomGrid = (gridSize, verbose = true) => {
   const allHeads = _.range(0, gridSize).map((i) => i)
   if (verbose) {
@@ -93,6 +96,7 @@ const tryRandomGrid = (gridSize, verbose = true) => {
   return flippedResult === magicIndex
 }
 
+/** Test solutions for specified random grids */
 const tryRandomGrids = (numGrids, gridSize) => {
   console.log(`Trying grids...`)
   const start = Date.now()
