@@ -19,8 +19,7 @@ Stipulations:
 
 # XOR Solution
 
-<img width="476" alt="image" src="https://user-images.githubusercontent.com/6108440/178312268-46493d73-f90d-4029-85cb-ed93c81f8781.png">
-
+<img width="542" alt="image" src="https://user-images.githubusercontent.com/6108440/178312892-b63212ce-505d-4971-9219-c23f9f15abc3.png">
 
 See [solution-xor.js](./solution-xor.js) for implementation.
 
