@@ -58,8 +58,8 @@ Output:
 
 ## Notes & Limitations
 
-- This solution only works for grids with power of 2 sizes (2x2, 4x4, 8x8, etc.) as the friend may be called upon to flip a coin which does not exist in a grid of another size.
-- Technically, you do not need to flip any coin if the initial heads-up XOR result is the index of the magic coin, but this flip will always be a no-op since the algorithm will instruct the friend to flip the 0-index coin.
+- This solution only works for grids with power of 2 sizes (2x2, 4x4, 8x8, etc.) as for other grid sizes, the friend may be called upon to flip a coin which does not exist.
+- Technically, the friend does not need to flip any coin if the initial heads-up XOR result is the index of the magic coin, but this flip will always be a no-op since the algorithm will instruct the friend to flip the 0-index coin.
 
 # Coordinate Transformations Solution
 
