@@ -39,9 +39,9 @@ const tryEach = (a) =>
 const tryRandomGrid = (gridSize, verbose = true) => {
   const allHeads = _.range(0, gridSize).map((i) => i)
   if (verbose) {
-    console.log(`All heads grid:`)
+    console.log(`Index grid:`)
     printGrid(allHeads)
-    console.log(`All heads binary grid:`)
+    console.log(`Binary index grid:`)
     printGrid(allHeads.map((v) => toBinary(v, gridSize - 1)))
   }
 
@@ -56,7 +56,7 @@ const tryRandomGrid = (gridSize, verbose = true) => {
     printGrid(a, magicIndex)
     console.log(`Coin values:`)
     printGrid(vals(a), magicIndex)
-    console.log(`Coin values in binary:`)
+    console.log(`Binary coin values:`)
     printGrid(
       vals(a).map((v) => toBinary(v, gridSize - 1)),
       magicIndex
@@ -70,13 +70,15 @@ const tryRandomGrid = (gridSize, verbose = true) => {
 
   const toFlip = result ^ magicIndex
 
-  verbose &&
+  if (verbose) {
+    console.log(`\nSOLUTION:\n`)
     console.log(
       `To implicate magic coin, flip index: ${toFlip} [${toBinary(
         toFlip,
         gridSize - 1
       )}]`
     )
+  }
 
   const flipped = flip(a, toFlip)
   const flippedResult = calc(flipped)
