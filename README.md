@@ -96,6 +96,25 @@ grid position into the magic coin position.
     1.  Separately for row and column
 1. You receive the modified grid and use the transformations to read off the magic coin row, column.
 
+## Test
+
+At the bottom of the code you can
+specify the size of the grid and 
+the number of random trials with
+the `nrand` and `ngrid` parameters.
+
+Then do 
+
+```sh
+python solution-grid.py
+```
+
+This will: 
+
+1. Generate a random grid
+1. Generate a random coin posiiton
+1. Have your friend flip one coin based on these.
+1. Read the new grid and check the position against the known one
 
 ## Notes & Limitations
 
