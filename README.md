@@ -65,7 +65,7 @@ Output:
 
 ## Implementation
 
-See [solution-grid.js](./solution-grid.py) for implementation.
+See [solution-grid.py](./solution-grid.py) for implementation.
 
 1. For a 2^n number specified in binary format, 
  there are 2^n ways to ways to flip the n elements
