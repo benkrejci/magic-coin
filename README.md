@@ -19,7 +19,7 @@ Stipulations:
 
 # Solutions
 
-_**~SPOILER ALERT~**_
+_**\~SPOILER ALERT\~**_
 
 See [solutions](./solutions) directory.
 
